@@ -39,7 +39,7 @@ module "aws_spoke" {
 # ---------------------------------------------------------------------------------------------------------------------
 module "onprem" {
   source              = "github.com/gleyfer/aviatrix-demo-onprem-aws"
-  hostname            = "Onprem"
+  hostname            = "OnPrem"
   tunnel_proto        = "IPsec"
   network_cidr        = cidrsubnet(var.onprem_supernet, 8, 200)
   public_subnets      = [cidrsubnet(var.onprem_supernet, 9, 400)]
