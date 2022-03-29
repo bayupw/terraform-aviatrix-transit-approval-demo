@@ -11,7 +11,7 @@ Terraform code will deploy:
 
 The code provided is for demo purposes only.
 
-![Aviatrix Transit Approval Demo Topology](images/aviatrix-transit-approval-demo-diagram.png "Aviatrix Transit Approval Demo Topology")
+![Aviatrix Transit Approval Demo Topology](images/terraform-aviatrix-transit-approval-demo.png "Aviatrix Transit Approval Demo Topology")
 
 ## Prerequisites
 
@@ -35,13 +35,13 @@ TF_VAR_aws_account | AWS Aviatrix Account
 Clone the project
 
 ```bash
-git clone https://github.com/bayupw/aviatrix-transit-approval-demo
+git clone https://github.com/bayupw/terraform-aviatrix-transit-approval-demo
 ```
 
 Go to the project directory
 
 ```bash
-cd aviatrix-transit-approval-demo
+cd terraform-aviatrix-transit-approval-demo
 ```
 
 Set environment variables
@@ -49,8 +49,8 @@ Set environment variables
 ```bash
 export AVIATRIX_CONTROLLER_IP="aviatrixcontroller.aviatrix.lab"
 export AVIATRIX_USERNAME="admin"
-export AVIATRIX_PASSWORD="aviatrix123"
-export TF_VAR_aws_account="AWS-Aviatrix-Account"
+export AVIATRIX_PASSWORD="Aviatrix123#"
+export TF_VAR_aws_account="aws-account"
 ```
 
 Terraform workflow

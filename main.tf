@@ -4,7 +4,7 @@
 module "aws_transit_1" {
   source                = "terraform-aviatrix-modules/mc-transit/aviatrix"
   cloud                 = "aws"
-  name                  = "transit"
+  name                  = var.transit_gw_name
   region                = var.aws_region
   cidr                  = cidrsubnet(var.cloud_supernet, 8, 255)
   account               = var.aws_account
@@ -24,7 +24,7 @@ module "aws_spoke" {
 
   source        = "terraform-aviatrix-modules/mc-spoke/aviatrix"
   cloud         = "AWS"
-  name          = "spoke${count.index + 1}"
+  name          = "${var.spoke_gw_name}${count.index + 1}"
   cidr          = cidrsubnet(var.cloud_supernet, 8, 101 + count.index)
   region        = var.aws_region
   account       = var.aws_account

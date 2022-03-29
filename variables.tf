@@ -22,16 +22,34 @@ variable "aws_region" {
   description = "AWS region"
 }
 
+variable "transit_gw_name" {
+  type        = string
+  default     = "aws-transit"
+  description = "Transit VPC and gateway name"
+}
+
 variable "transit_gw_asn" {
   type        = number
   default     = 65501
-  description = "Transit Gateway ASN"
+  description = "Transit gateway ASN"
+}
+
+variable "spoke_gw_name" {
+  type        = string
+  default     = "aws-transit"
+  description = "Spoke VPC and gateway prefix name"
+}
+
+variable "onprem_gw_name" {
+  type        = string
+  default     = "aws-onprem"
+  description = "OnPrem VPC and gateway prefix name"
 }
 
 variable "onprem_asn" {
   type        = number
   default     = 65511
-  description = "OnPrem Router ASN"
+  description = "OnPrem router ASN"
 }
 
 variable "aws_instance_size" {
